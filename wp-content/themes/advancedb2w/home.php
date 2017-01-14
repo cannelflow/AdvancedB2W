@@ -31,7 +31,7 @@
                 ?>
                 <?php if ( $wp_query -> have_posts() ) : while ( $wp_query -> have_posts() ) : $wp_query -> the_post(); ?>
                     <div class="post-preview">
-                     <a href="post.html">
+                     <a href="<?php the_permalink() ; ?>">
                         <h2 class="post-title">
                             <?php the_title() ; ?>
                         </h2>
