@@ -57,5 +57,14 @@ if( !function_exists('ie_scripts')) {
    	add_action('wp_head', 'ie_scripts');
 } // end if
 
+/**
+ * Replaces the excerpt "more" text by a link.
+ */
+function new_excerpt_more($more) {
+    global $post;
+	return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading &raquo;</a>';
+}
+
+add_filter('excerpt_more', 'new_excerpt_more');
 
 ?>

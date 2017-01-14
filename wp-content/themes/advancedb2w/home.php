@@ -20,9 +20,11 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <?php
+                  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
                   $args = array(
                       'post_type'     => 'post',
                       'post_per_page' => 8,
+                      'paged' => $paged,
                    );
                    
                    $wp_query = new WP_Query($args)
@@ -33,54 +35,24 @@
                         <h2 class="post-title">
                             <?php the_title() ; ?>
                         </h2>
+                    </a>    
                         <h3 class="post-subtitle">
                            <?php the_excerpt() ; ?>
                         </h3>
-                     </a>
-                        <p class="post-meta">Posted by <?php the_author_posts_link() ; ?> on <time><?php the_date() ; ?></time></p>
+                        <p class="post-meta">Posted by <?php the_author_posts_link(); ?> on <?php the_time('F j, Y'); ?></p>
                     </div>
                     <hr>
                 <?php endwhile; else : ?>
 	            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                 <?php endif; ?>
-                
-                <!--<div class="post-preview">-->
-                <!--    <a href="post.html">-->
-                <!--        <h2 class="post-title">-->
-                <!--            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.-->
-                <!--        </h2>-->
-                <!--    </a>-->
-                <!--    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>-->
-                <!--</div>-->
-                <!--<hr>-->
-                <!--<div class="post-preview">-->
-                <!--    <a href="post.html">-->
-                <!--        <h2 class="post-title">-->
-                <!--            Science has not yet mastered prophecy-->
-                <!--        </h2>-->
-                <!--        <h3 class="post-subtitle">-->
-                <!--            We predict too much for the next year and yet far too little for the next ten.-->
-                <!--        </h3>-->
-                <!--    </a>-->
-                <!--    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>-->
-                <!--</div>-->
-                <!--<hr>-->
-                <!--<div class="post-preview">-->
-                <!--    <a href="post.html">-->
-                <!--        <h2 class="post-title">-->
-                <!--            Failure is not an option-->
-                <!--        </h2>-->
-                <!--        <h3 class="post-subtitle">-->
-                <!--            Many say exploration is part of our destiny, but it’s actually our duty to future generations.-->
-                <!--        </h3>-->
-                <!--    </a>-->
-                <!--    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>-->
-                <!--</div>-->
-                <!--<hr>-->
                 <!-- Pager -->
                 <ul class="pager">
+                     <li class="previous">
+                        <?php previous_posts_link('&larr; Newer Posts'); ?>
+                    </li>
                     <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
+                        <?php next_posts_link('Older Posts &rarr;'); ?>
+                        <!-- <a href="#">Older Posts &rarr;</a> -->
                     </li>
                 </ul>
             </div>
