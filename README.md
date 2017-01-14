@@ -1,31 +1,7 @@
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+#This is my attempt for <a href="https://www.youtube.com/watch?v=wMP2GANWXBA&list=PLy9vu-vJXycsLC9u8gKY6lt3k3FQu1WzZ" target="_blank">youtube tutorial</a> 
 
+##which shows how to create wordpress theme with bootstrap...
 
-Welcome to your WordPress website on Cloud9 IDE!
+<a href="https://advancedb2w-cannelflow1.c9users.io" href="_blank">you can see my final project here</a>
 
-To get you started, we've already...
-
-1) Started MySQL using:
-
-   $ mysql-ctl start
-
-2) Clicked the Run Project button
-
-3) Clicked on Preview > Preview Running Application
-
-And now you are ready to configure your WordPress admin interface!
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
