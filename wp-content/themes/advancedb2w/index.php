@@ -14,7 +14,7 @@
                            <?php the_excerpt() ; ?>
                         </h3>
                      </a>
-                        <p class="post-meta">Posted by <a href="#"><?php the_author() ; ?></a> on <time><?php the_date() ; ?></time></p>
+                        <p class="post-meta">Posted by <?php the_author_posts_link() ; ?> on <time><?php the_date() ; ?></time></p>
                     </div>
                     <hr>
                 <?php endwhile; else : ?>
